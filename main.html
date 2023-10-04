@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HSTU Online Supershop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-f mx-auto">
+                <div class="logo">
+                    <img src="images/logo0.png" alt="Website Logo">
+                </div>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Feature</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </div>
+            <div class="nav-l">
+                <div class="search-bar mx-2">
+                <form action="search.php" method="GET">
+                    <input type="text" name="query" placeholder="Search...">
+                    <button type="submit">Search</button>
+                </form>
+            </div>
+
+            <div class="user">
+                <?php if ($userLoggedIn) { ?>
+                <a class="mx-2" href="logout.php">Log Out </a>
+                <?php } else { ?>
+                <a href="login.php">Log In </a>
+                <?php } ?>
+            </div>
+        </div>
+    </nav>
+    </header>
+
+
+    <!-- <div class="logo">
+        <img src="images/logo.png" alt="Your Company Logo">
+    </div> -->
+    <div  class="container">
+        <div>
+            <h1>Book Corner</h1>
+            <div class="food-list row ">
+                <div class="product-card col shadow p-3 mb-5 bg-body-tertiary rounded">
+                    <img src="images/book1.jpg" alt="Cup Cake">
+                    <h2>Cracking the Coding Interview</h2>
+                    <p>Price: ৳ 746</p>
+                    <button type="button" class="btn btn-outline-danger">Add to Cart</button>
+                </div>
+        
+                <div class="product-card col shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+                    <img src="images/book2.jpg" alt="Chocolate Cupcake">
+                    <h2>The Alchemist</h2>
+                    <p>Price: ৳ 365</p>
+                    <button type="button" class="btn btn-outline-danger">Add to Cart</button>
+                </div>
+        
+                <div class="product-card col shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+                    <img src="images/book3.jpg" alt="Chocolate Cupcake">
+                    <h2>The Almanak of Naval Ravikant</h2>
+                    <p>Price: ৳ 999</p>
+                    <button type="button" class="btn btn-outline-danger">Add to Cart</button>
+                </div>
+            </div>
+            <div class="food-list row">
+                <div class="product-card col shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+                    <img src="images/book4.jpg" alt="Cup Cake">
+                    <h2>How to Talk to Anyone</h2>
+                    <p>Price: ৳ 399</p>
+                    <button type="button" class="btn btn-outline-danger">Add to Cart</button>
+                </div>
+        
+                <div class="product-card col shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+                    <img src="images/book5.jpg" alt="Chocolate Cupcake">
+                    <h2>Think and Grow Rich</h2>
+                    <p>Price: ৳ 499</p>
+                    <button type="button" class="btn btn-outline-danger">Add to Cart</button>
+                </div>
+        
+                <div class="product-card col shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+                    <img src="images/book6.jpg" alt="Chocolate Cupcake">
+                    <h2>Rich Dad & Poor Dad</h2>
+                    <p>Price: ৳ 999</p>
+                    <button type="button" class="btn btn-outline-danger">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        
+        <div>
+            <h1>Food Corner</h1>
+            <div class="food-list row">
+                <div class="product-card col shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+                    <img src="images/food1.jpg" alt="Cup Cake">
+                    <h2>Brown Cup Cake</h2>
+                    <p>Price: ৳ 299</p>
+                    <button type="button" class="btn btn-outline-danger">Add to Cart</button>
+                </div>
+        
+                <div class="product-card col shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+                    <img src="images/food2.jpg" alt="Chocolate Cupcake">
+                    <h2> Black Chocolate Cupcake</h2>
+                    <p>Price: ৳ 350</p>
+                    <button type="button" class="btn btn-outline-danger">Add to Cart</button>
+                </div>
+        
+                <div class="product-card col shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+                    <img src="images/food3.jpg" alt="Chocolate Cupcake">
+                    <h2>Hot Chocolate Cupcake</h2>
+                    <p>Price: ৳ 299</p>
+                    <button type="button" class="btn btn-outline-danger">Add to Cart</button>
+                </div>
+            </div>
+            <div class="food-list row">
+                <div class="product-card col shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+                    <img src="images/food4.jpg" alt="Cup Cake">
+                    <h2>Mixed Fast Food</h2>
+                    <p>Price: ৳ 899</p>
+                    <button type="button" class="btn btn-outline-danger">Add to Cart</button>
+                </div>
+        
+                <div class="product-card col shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+                    <img src="images/food5.jpg" alt="Chocolate Cupcake">
+                    <h2>Vegetable Pizza</h2>
+                    <p>Price: ৳ 699</p>
+                    <button type="button" class="btn btn-outline-danger">Add to Cart</button>
+                </div>
+        
+                <div class="product-card col shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+                    <img src="images/food6.jpg" alt="Chocolate Cupcake">
+                    <h2>Regular Burger</h2>
+                    <p>Price: ৳ 599</p>
+                    <button type="button" class="btn btn-outline-danger">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div>
+            <h1>Vegetable Corner</h1>
+            <div class="food-list row">
+                <div class="product-card col shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+                    <img src="images/Vegetable1.jpg" alt="Cup Cake">
+                    <h2>Broccoli</h2>
+                    <p>Price: ৳ 350 (per kg)</p>
+                    <button type="button" class="btn btn-outline-danger">Add to Cart</button>
+                </div>
+        
+                <div class="product-card col shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+                    <img src="images/Vegetable2.jpg" alt="Chocolate Cupcake">
+                    <h2>Spinach</h2>
+                    <p>Price: ৳ 199 (per kg)</p>
+                    <button type="button" class="btn btn-outline-danger">Add to Cart</button>
+                </div>
+        
+                <div class="product-card col shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+                    <img src="images/Vegetable3.jpg" alt="Chocolate Cupcake">
+                    <h2>Cabbage</h2>
+                    <p>Price: ৳ 149 (per kg)</p>
+                    <button type="button" class="btn btn-outline-danger">Add to Cart</button>
+                </div>
+            </div>
+            <div class="food-list row">
+                <div class="product-card col shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+                    <img src="images/Vegetable4.jpg" alt="Cup Cake">
+                    <h2>Tomato</h2>
+                    <p>Price: ৳ 120 (per kg)</p>
+                    <button type="button" class="btn btn-outline-danger">Add to Cart</button>
+                </div>
+        
+                <div class="product-card col shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+                    <img src="images/Vegetable5.jpg" alt="Chocolate Cupcake">
+                    <h2>Pepper</h2>
+                    <p>Price: ৳ 499 (per kg)</p>
+                    <button type="button" class="btn btn-outline-danger">Add to Cart</button>
+                </div>
+        
+                <div class="product-card col shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+                    <img src="images/Vegetable6.jpg" alt="Chocolate Cupcake">
+                    <h2>Carrot</h2>
+                    <p>Price: ৳ 120 (per kg)</p>
+                    <button type="button" class="btn btn-outline-danger">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div>
+            <h1>Study Material Corner</h1>
+            <div class="food-list row">
+                <div class="product-card col shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+                    <img src="images/Study1.jpg" alt="Cup Cake">
+                    <h2>Pen</h2>
+                    <p>Price: ৳ 45</p>
+                    <button type="button" class="btn btn-outline-danger">Add to Cart</button>
+                </div>
+        
+                <div class="product-card col shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+                    <img src="images/Study2.jpg" alt="Chocolate Cupcake">
+                    <h2>Pencil</h2>
+                    <p>Price: ৳ 25</p>
+                    <button type="button" class="btn btn-outline-danger">Add to Cart</button>
+                </div>
+        
+                <div class="product-card col shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+                    <img src="images/Study3.jpg" alt="Chocolate Cupcake">
+                    <h2>PVC-Notebook</h2>
+                    <p>Price: ৳ 199</p>
+                    <button type="button" class="btn btn-outline-danger">Add to Cart</button>
+                </div>
+            </div>
+            <div class="food-list row">
+                <div class="product-card col shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+                    <img src="images/Study4.jpg" alt="Cup Cake">
+                    <h2>Binding Cover</h2>
+                    <p>Price: ৳ 120</p>
+                    <button type="button" class="btn btn-outline-danger">Add to Cart</button>
+                </div>
+        
+                <div class="product-card col shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+                    <img src="images/Study5.jpg" alt="Chocolate Cupcake">
+                    <h2>Geometric material</h2>
+                    <p>Price: ৳ 399</p>
+                    <button type="button" class="btn btn-outline-danger">Add to Cart</button>
+                </div>
+        
+                <div class="product-card col shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+                    <img src="images/Study6.jpg" alt="Chocolate Cupcake">
+                    <h2>Calender</h2>
+                    <p>Price: ৳ 120</p>
+                    <button type="button" class="btn btn-outline-danger">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div>
+            <h1>Electronics Corner</h1>
+            <div class="food-list row">
+                <div class="product-card col shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+                    <img src="images/Electronics1.jpg" alt="Cup Cake">
+                    <h2>Camera</h2>
+                    <p>Price: ৳ 49,999</p>
+                    <button type="button" class="btn btn-outline-danger">Add to Cart</button>
+                </div>
+        
+                <div class="product-card col shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+                    <img src="images/Electronics2.jpg" alt="Chocolate Cupcake">
+                    <h2>Arduino Package</h2>
+                    <p>Price: ৳ 3999</p>
+                    <button type="button" class="btn btn-outline-danger">Add to Cart</button>
+                </div>
+        
+                <div class="product-card col shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+                    <img src="images/Electronics3.jpg" alt="Chocolate Cupcake">
+                    <h2>Mixed desktop Meterial</h2>
+                    <p>Price: ৳ 4999</p>
+                    <button type="button" class="btn btn-outline-danger">Add to Cart</button>
+                </div>
+            </div>
+            <div class="food-list row">
+                <div class="product-card col shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+                    <img src="images/Electronics4.jpg" alt="Cup Cake">
+                    <h2>Mixed Circuit Pack - l</h2>
+                    <p>Price: ৳ 799</p>
+                    <button type="button" class="btn btn-outline-danger">Add to Cart</button>
+                </div>
+        
+                <div class="product-card col shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+                    <img src="images/Electronics5.jpg" alt="Chocolate Cupcake">
+                    <h2>Mouse</h2>
+                    <p>Price: ৳ 599</p>
+                    <button type="button" class="btn btn-outline-danger">Add to Cart</button>
+                </div>
+        
+                <div class="product-card col shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+                    <img src="images/Electronics6.jpg" alt="Chocolate Cupcake">
+                    <h2>Mixed Circuit Pack - ll</h2>
+                    <p>Price: ৳ 999</p>
+                    <button type="button" class="btn btn-outline-danger">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container my-5">
+        <footer class="text-center text-lg-start text-dark" style="background-color: #ECEFF1">
+            <section class="d-flex justify-content-between p-4 text-white" style="background-color: #21D192">
+                <div class="me-5">
+                    <span> <b>Get connected with us on social networks: </b></span>
+                </div>
+            </section>
+            <section class="">
+                <div class="container text-center text-md-start mt-5">
+                    <div class="row mt-3">
+                        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                            <h6 class="text-uppercase fw-bold">HSTU Online Supershop</h6>
+                            <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                                style="width: 192px; background-color: #7c4dff; height: 2px" />
+                            <p>
+                                Explore a wide variety of products,including books,
+                                delicious food items,essential study materials etc. 
+                                Discover convenience & choice under one roof at SuperShop!
+                            </p>
+                        </div>
+                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                            <!-- Links -->
+                            <h6 class="text-uppercase fw-bold">Products</h6>
+                            <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                                style="width: 80px; background-color: #7c4dff; height: 2px" />
+                            <p>
+                                <a href="#!" class="text-dark">Books</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-dark">Foods</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-dark">Vegetable</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-dark">Study Material</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-dark">Electronics Products</a>
+                            </p>
+                        </div>
+
+                        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                            <!-- Links -->
+                            <h6 class="text-uppercase fw-bold">Useful links</h6>
+                            <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                                style="width: 110px; background-color: #7c4dff; height: 2px" />
+                            <p>
+                                <a href="#!" class="text-dark">Facebook</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-dark">Whatsapp</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-dark">Telegram</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-dark">About</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-dark">Help</a>
+                            </p>
+                        </div>
+
+                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                            <!-- Links -->
+                            <h6 class="text-uppercase fw-bold">Contact</h6>
+                            <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                                style="width: 75px; background-color: #7c4dff; height: 2px" />
+                            <p><i class="fas fa-home mr-3"></i> Baserhat,Dinajpur,Rangpur</p>
+                            <p><i class="fas fa-envelope mr-3"></i> info@newbie_tyro.com</p>
+                            <p><i class="fas fa-phone mr-3"></i> + 880 1737206061</p>
+                            <p><i class="fas fa-print mr-3"></i> + 880 1727838642</p>
+                            <p><i class="fas fa-print mr-3"></i> + 880 1311389005</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+                © 2023 Copyright:
+                <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
