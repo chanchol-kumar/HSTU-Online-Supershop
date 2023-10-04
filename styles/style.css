@@ -1,0 +1,178 @@
+/* Reset some default browser styles */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set a background color and text color for the body */
+body {
+    background-color:beige;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+.nav-f{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-l{
+    display: flex;
+    align-items: center;
+    margin-left: 700px;
+}
+
+/* Style the header section */
+header {
+    background-color: #007BFF;
+    color: white;
+}
+
+/* Style the main content container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+.foods {
+padding: 100px;
+margin-top: 100px;
+
+}
+
+/* Style headings */
+h1 {
+    font-size: 70px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    text-align: center;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: rgb(0, 0, 0);
+    color: #f2f2f2;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* Style product cards */
+.product-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 20px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    width: 100%;
+    height: 320px;
+}
+
+/* Style buttons */
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Add spacing between elements */
+.ALL {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .product-card {
+        width: 48%;
+    }
+}
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img {
+    align-items:self-start;
+    width: 60px; /* Adjust the size of your logo */
+    height: 60px;
+    margin-right: 10px;
+    margin: 10px;
+}
+
+
+header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333; 
+            color: #fff; 
+            padding: 5px; 
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .log img {
+            max-height: 100px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px; 
+        }
+
+        nav ul li a {
+            text-decoration:solid;
+            color: #fff;
+        }
+
+        .search-bar {
+            flex:auto;
+        }
+
+        .search-bar input[type="text"] {
+            padding: 5px;
+            width: 70%;
+        }
+
+        .search-bar button {
+            padding: 5px 10px;
+            background-color: #007bff; 
+            border:#007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .user a {
+            text-decoration:wavy;
+            color: #2c1717;
+            padding: 5px;
+            background-color: #e31111; 
+            border:#252525;
+            cursor: pointer;
+
+        }
